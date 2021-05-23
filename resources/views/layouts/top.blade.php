@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="{{ asset('css/photoswipe/photoswipe.css') }}">
   <link rel="stylesheet" href="{{ asset('css/photoswipe/default-skin/default-skin.css') }}">
   <link rel="shortcut icon" href="img/favicon.ico" />
@@ -30,13 +31,14 @@
           <li class="gnav-item"><a class="gnav-link" href="#about-section">ABOUT</a></li>
           <li class="gnav-item"><a class="gnav-link" href="#skill-section">SKILL</a></li>
           <li class="gnav-item"><a class="gnav-link" href="#contact-section">CONTACT</a></li>
+          <li class="gnav-item"><a class="gnav-link" href="{{ url('/admin') }}">ADMIN</a></li>
       </ul>
     </nav>
     <!-- /.gnav -->
 
     <!-- .header -->
       <header class="header">
-        @include('layouts.header')        
+        @include('layouts.header')
       </header>
     <!-- /.header -->
     <main class="content">

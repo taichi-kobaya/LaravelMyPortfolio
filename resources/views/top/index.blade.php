@@ -244,7 +244,69 @@
               お問い合わせは、<br class="sp-only">下記お問い合わせフォームからお願いいたします。
             </p>
           </div>
-          <div class="section-body contact">
+          <div class="container">
+        <div class="container">
+            {!! Form::open(['route' => 'confirm', 'method' => 'POST']) !!}
+                {{ csrf_field() }}
+                <div class="form-group row">
+                    <p class="col-sm-4 col-form-label">お名前（10文字以内）<span class="badge badge-danger ml-1">必須</span></p>
+                    <div class="col-sm-8">
+                        {{ Form::text('name', null, ['class' => 'form-control']) }}
+                    </div>
+                </div>
+                @if ($errors->has('name'))
+                <p class="alert alert-danger">{{ $errors->first('name') }}</p>
+                @endif
+
+                <div class="form-group row">
+                    <p class="col-sm-4 col-form-label">メールアドレス<span class="badge badge-danger ml-1">必須</span></p>
+                    <div class="col-sm-8">
+                        {{ Form::text('email', null, ['class' => 'form-control']) }}
+                    </div>
+                </div>
+                @if ($errors->has('email'))
+                <p class="alert alert-danger">{{ $errors->first('email') }}</p>
+                @endif
+
+
+                <div class="form-group row">
+                    <p class="col-sm-4 col-form-label">電話番号</p>
+                    <div class="col-sm-8">
+                        {{ Form::text('tel', null, ['class' => 'form-control']) }}
+                    </div>
+                </div>
+                @if ($errors->has('tel'))
+                <p class="alert alert-danger">{{ $errors->first('tel') }}</p>
+                @endif
+
+                <div class="form-group row">
+                    <p class="col-sm-4 col-form-label">性別<span class="badge badge-danger ml-1">必須</span></p>
+                    <div class="col-sm-8">
+                        <label>{{ Form::radio('gender', "男性") }}男性</label>
+                        <label>{{ Form::radio('gender', "女性") }}女性</label>
+                    </div>
+                </div>
+                @if ($errors->has('gender'))
+                <p class="alert alert-danger">{{ $errors->first('gender') }}</p>
+                @endif
+
+                <div class="form-group row">
+                    <p class="col-sm-4 col-form-label">お問い合わせ内容<span class="badge badge-danger ml-1">必須</span></p>
+                    <div class="col-sm-8">
+                        {{ Form::textarea('contents', null, ['class' => 'form-control']) }}
+                    </div>
+                </div>
+                @if ($errors->has('contents'))
+                <p class="alert alert-danger">{{ $errors->first('contents') }}</p>
+                @endif
+
+                <div class="text-center">
+                    {{ Form::submit('確認画面へ', ['class' => 'btn btn-primary']) }}
+                </div>
+            {!! Form::close() !!}
+        </div>
+    </div>
+          <!-- <div class="section-body contact">
             <form method="post" action="">
                 <label for="name">お名前（10文字以内）</label>
                 <input type="text" name="name" value="" id="name">
@@ -253,7 +315,7 @@
                 <label for="message">メッセージ</label>
                 <textarea name="message" rows="5" cols="70" id="message"></textarea>
               <input type="submit" value="送信">
-            </form>
+            </form> -->
 
             <!-- <ul class="contact-list">
               <li class="contact-item">
@@ -266,7 +328,7 @@
               </li>
             </ul>
             <div class="contact-text">higoronookonaigadaiji@gmail.com</div> -->
-          </div>
+          <!-- </div> -->
         </div>
       </section>
       <!-- /.contact-section -->
