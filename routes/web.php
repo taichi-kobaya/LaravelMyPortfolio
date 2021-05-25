@@ -31,3 +31,10 @@ Route::get('/complete', 'ContactsController@complete')->name('complete');
 
 // 管理画面
 Route::get('/admin', 'AdminTopController@showList')->name('admin');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

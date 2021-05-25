@@ -31,7 +31,6 @@
           <li class="gnav-item"><a class="gnav-link" href="#about-section">ABOUT</a></li>
           <li class="gnav-item"><a class="gnav-link" href="#skill-section">SKILL</a></li>
           <li class="gnav-item"><a class="gnav-link" href="#contact-section">CONTACT</a></li>
-          <li class="gnav-item"><a class="gnav-link" href="{{ url('/admin') }}">ADMIN</a></li>
       </ul>
     </nav>
     <!-- /.gnav -->

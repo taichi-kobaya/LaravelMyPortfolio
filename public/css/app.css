@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
 
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
@@ -5249,6 +5250,7 @@ input[type=button].btn-block {
 
 .pagination {
   display: flex;
+  justify-content: center;
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem;
