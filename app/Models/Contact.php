@@ -7,20 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    // テーブル名
-    protected $table = 'contacts';
+    // Primary Key
+    public $primaryKey = 'id';
+    // Timestamps
+    public $timestamps = true;
 
-    // 可変項目
-    protected $fillable =
-    [
+    protected $fillable = [
         'name',
         'email',
-        'message',
-    ];
-    protected $casts = [
-        'id' => 'integer',
-        'name' => 'string',
-        'email' => 'string',
-        'message' => 'string',
+        'tel',
+        'gender',
+        'contents',
     ];
 }

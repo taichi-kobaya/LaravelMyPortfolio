@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\ContactsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use App\Http\Controllers\TopController;
 |
 */
 
-Route::get('/', [TopController::class, 'index']);
+Route::get('/', 'TopController@index')->name('top');
 
 Auth::routes();
 
@@ -26,3 +28,8 @@ Route::post('/process', 'ContactsController@process')->name('process');
 
 // 完了ページ
 Route::get('/complete', 'ContactsController@complete')->name('complete');
+
+// 管理画面
+Route::get('/admin', 'AdminTopController@showList')->name('admin');
+
+Route::get('/menu', 'MenuController@menu')->name('menu');
