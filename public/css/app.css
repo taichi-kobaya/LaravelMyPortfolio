@@ -192,6 +192,11 @@ a:not([href]):not([class]):hover {
   text-decoration: none;
 }
 
+.logout-submit {
+  display: flex;
+  justify-content: center;
+}
+
 pre,
 code,
 kbd,
